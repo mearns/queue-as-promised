@@ -50,12 +50,16 @@ export class Queue {
           rejectForCaller(new Error(`Item could not be deserialized: ${e.message}`))
           return
         }
+        let settled = false
         return new Promise((resolveForQueue) => {   // eslint-disable-line promise/param-names
           resolveForCaller({
             item: deserializedItem,
             done: (p) => {
-              Promise.resolve(p)
-                .finally(resolveForQueue)
+              if (!settled) {
+                settled = true
+                Promise.resolve(p)
+                  .finally(resolveForQueue)
+              }
             }
           })
         })
