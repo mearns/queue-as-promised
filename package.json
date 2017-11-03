@@ -1,7 +1,11 @@
 {
-  "name": "queueing-service",
+  "name": "service-queue",
   "version": "0.0.1",
   "description": "",
+  "keywords": [
+    "queue",
+    "queueing"
+  ],
   "main": "dist/src/index.js",
   "scripts": {
     "clean": "rimraf coverage/ .nyc_output/ dist/",
@@ -31,6 +35,17 @@
     "build": "npm-run-all clean verify compile"
   },
   "author": "Brian Mearns",
+  "homepage": "https://github.com/mearns/service-queue",
+  "bugs": {
+    "url": "https://github.com/mearns/service-queue/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mearns/service-queue.git"
+  },
+  "engines": {
+    "node": ">5.0.0 <9"
+  },
   "license": "MIT",
   "babel": {
     "presets": [
@@ -70,6 +85,7 @@
     "babel-plugin-transform-react-jsx": "6.24.1",
     "babel-preset-env": "1.6.1",
     "babel-preset-react": "6.24.1",
+    "bluebird": "3.5.1",
     "chai": "4.1.2",
     "copyfiles": "1.2.0",
     "if-env": "1.0.0",
@@ -86,9 +102,9 @@
     "stryker-api": "0.10.0",
     "stryker-html-reporter": "0.10.0",
     "stryker-mocha-framework": "0.6.0",
-    "stryker-mocha-runner": "0.9.0"
+    "stryker-mocha-runner": "0.9.0",
+    "travis-lint": "1.0.0",
+    "yaml-lint": "1.0.0"
   },
-  "dependencies": {
-    "bluebird": "3.5.1"
-  }
+  "dependencies": {}
 }
