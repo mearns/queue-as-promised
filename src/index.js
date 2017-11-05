@@ -45,7 +45,7 @@ export class Queue {
       this._tail = this._tail.then(() => {
         let deserializedItem
         try {
-          deserializedItem = JSON.parse(serializedItem)
+          deserializedItem = item === undefined ? undefined : JSON.parse(serializedItem)
         } catch (e) {
           rejectForCaller(new Error(`Item could not be deserialized: ${e.message}`))
           return
