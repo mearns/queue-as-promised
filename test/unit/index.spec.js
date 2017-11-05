@@ -68,4 +68,29 @@ describe('service-queue', () => {
         }
       })
   })
+
+  it('should support registering services from another service', () => {
+    // given
+    const promises = []
+    const log = []
+    const queueUnderTest = new Queue()
+    // when
+    promises.push(queueUnderTest.enqueue(0)
+      .then(({done}) => {
+        log.push(0)
+        promises.push(queueUnderTest.enqueue(1)
+          .then(({done}) => {
+            log.push(1)
+            done()
+          }))
+        done()
+      }))
+
+    // then
+    return promises[0]
+      .then(() => promises[1])
+      .then(() => {
+        expect(log).to.deep.equal([0, 1])
+      })
+  })
 })
