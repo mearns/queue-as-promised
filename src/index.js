@@ -52,16 +52,16 @@ export class Queue {
         }
         let settled = false
         return new Promise((resolveForQueue) => {   // eslint-disable-line promise/param-names
-          resolveForCaller({
-            item: deserializedItem,
-            done: (p) => {
-              if (!settled) {
-                settled = true
-                Promise.resolve(p)
-                  .finally(resolveForQueue)
-              }
+          const done = (p) => {
+            if (!settled) {
+              settled = true
+              Promise.resolve(p)
+                .finally(resolveForQueue)
             }
-          })
+          }
+          done.item = deserializedItem
+          done.done = done
+          resolveForCaller(done)
         })
       })
     })

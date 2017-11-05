@@ -208,4 +208,33 @@ describe('service-queue', () => {
         expect(log).to.deep.equal([0, 1, 2])
       })
   })
+
+  it('should fulfill service promises with a function', () => {
+    // given
+    const queueUnderTest = new Queue()
+    const item = 'my item'
+    const promises = []
+    const log = []
+
+    // when
+    promises.push(queueUnderTest.enqueue(item)
+      .then((done) => {
+        log.push(0)
+        expect(done).is.a('function')
+        expect(done.done).to.deep.equal(done)
+        expect(done.item).to.deep.equal(item)
+        done()
+      }))
+    promises.push(queueUnderTest.enqueue()
+      .then((done) => {
+        log.push(1)
+        done()
+      }))
+
+    // then
+    return Promise.all(promises)
+      .then(() => {
+        expect(log).to.deep.equal([0, 1])
+      })
+  })
 })
