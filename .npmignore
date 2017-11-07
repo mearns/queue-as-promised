@@ -7,3 +7,4 @@ coverage/
 .nyc_output/
 reports/
 .travis.yml
+npm-shrinkwrap.json
