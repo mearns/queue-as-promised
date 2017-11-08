@@ -1,3 +1,3 @@
-# service-queue
+# task-queue
 
-A JavaScript library that provides a queueing service.
+A JavaScript library for queueing up tasks, both synchronous and asynchronous.
