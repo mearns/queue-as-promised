@@ -9,10 +9,10 @@ matrix:
         env:  NODE_ENVIRONMENT=development BUILD_STEPS='compile test'
         os: osx
       - node_js: 8
-        env:  NODE_ENVIRONMENT=production  BUILD_STEPS='build feature-tests'
+        env:  NODE_ENVIRONMENT=production  BUILD_STEPS='compile test'
         os: linux
       - node_js: 8
-        env:  NODE_ENVIRONMENT=production  BUILD_STEPS='build feature-tests'
+        env:  NODE_ENVIRONMENT=production  BUILD_STEPS='compile test'
         os: osx
       - node_js: 8
         env:  NODE_ENVIRONMENT=development BUILD_STEPS='compile test'
