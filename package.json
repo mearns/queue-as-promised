@@ -34,13 +34,13 @@
     "build": "npm-run-all clean verify compile"
   },
   "author": "Brian Mearns",
-  "homepage": "https://github.com/mearns/service-queue",
+  "homepage": "https://github.com/mearns/task-queue",
   "bugs": {
-    "url": "https://github.com/mearns/service-queue/issues"
+    "url": "https://github.com/mearns/task-queue/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mearns/service-queue.git"
+    "url": "https://github.com/mearns/task-queue.git"
   },
   "engines": {
     "node": ">5.0.0 <9"
@@ -109,5 +109,7 @@
     "travis-lint": "1.0.0",
     "yaml-lint": "1.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "bluebird": "3.5.1"
+  }
 }
