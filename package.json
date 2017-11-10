@@ -1,5 +1,5 @@
 {
-  "name": "task-queue",
+  "name": "queue-as-promised",
   "version": "1.0.0",
   "description": "A JavaScript library for queueing up tasks, both synchronous and asynchronous.",
   "keywords": [
@@ -34,13 +34,13 @@
     "build": "npm-run-all clean verify compile"
   },
   "author": "Brian Mearns",
-  "homepage": "https://github.com/mearns/task-queue",
+  "homepage": "https://github.com/mearns/queue-as-promised",
   "bugs": {
-    "url": "https://github.com/mearns/task-queue/issues"
+    "url": "https://github.com/mearns/queue-as-promised/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mearns/task-queue.git"
+    "url": "https://github.com/mearns/queue-as-promised.git"
   },
   "engines": {
     "node": ">5.0.0 <9"
