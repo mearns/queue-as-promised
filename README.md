@@ -1,11 +1,14 @@
-# task-queue
+[![Build Status](https://travis-ci.org/mearns/queue-as-promised.svg?branch=master)](https://travis-ci.org/mearns/queue-as-promised)
+[![JavaScript Standard Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
+# queue-as-promised
 
 A JavaScript library for queueing up tasks, both synchronous and asynchronous.
 
 ## Install
 
 ```console
-npm install task-queue
+npm install queue-as-promised
 ```
 
 ## Overview
@@ -18,7 +21,7 @@ at a time, in order, and notify you when they're done.
 ## Usage
 
 ```javascript
-import {Queue} from 'task-queue'
+import {Queue} from 'queue-as-promised'
 
 const q = new Queue()
 
