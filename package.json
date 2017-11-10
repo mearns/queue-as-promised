@@ -1,7 +1,7 @@
 {
   "name": "task-queue",
   "version": "0.0.1",
-  "description": "",
+  "description": "A JavaScript library for queueing up tasks, both synchronous and asynchronous.",
   "keywords": [
     "queue",
     "queueing"
