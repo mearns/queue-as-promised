@@ -15,7 +15,7 @@ npm install queue-as-promised
 
 You have some tasks to perform and you need to queue them up. Maybe because they all share
 a resource so you can only have one running at a time. Doesn't matter why. You define a function
-that will run your task, and register with a `Queue`. The registered tasks will executed one
+that will run your task, and register with a `Queue`. The registered tasks will be executed one
 at a time, in order, and notify you when they're done.
 
 ## Usage
